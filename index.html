@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Raggen7 Software</title>
 
     <link rel="icon" type="image/png" href="raggen7.png">
@@ -15,7 +12,7 @@
             background-color: #0f172a;
             color: white;
             font-family: "Segoe UI", Arial, sans-serif;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: auto;
             padding: 30px;
         }
@@ -43,12 +40,22 @@
             margin-top: 0;
         }
 
+        .catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
         .card {
             background: #1e293b;
             border: 1px solid #334155;
             border-radius: 12px;
             padding: 20px;
-            margin-top: 25px;
+        }
+
+        .card h3 {
+            color: #00c8ff;
+            margin-top: 0;
         }
 
         .button {
@@ -59,7 +66,6 @@
             border-radius: 6px;
             font-weight: bold;
             display: inline-block;
-            margin-right: 10px;
         }
 
         .button:hover {
@@ -69,11 +75,11 @@
         .footer {
             text-align: center;
             color: #94a3b8;
-            margin-top: 40px;
-            font-size: 14px;
+            margin-top: 50px;
         }
 
     </style>
+
 </head>
 
 <body>
@@ -84,83 +90,25 @@
 
         <h1>RAGGEN7 SOFTWARE</h1>
 
-        <h2>Professional Windows Tools & Utilities</h2>
+        <h2>Windows Tools & Utilities</h2>
 
     </div>
 
-    <div class="card">
+    <div class="catalog">
 
-    <h3>Raggen7 LG TV YouTube AdFree</h3>
+        <div class="card">
 
-    <p>
-        Enjoy a cleaner YouTube experience on LG TV.
-    </p>
+            <h3>Raggen7 LG TV YouTube AdFree</h3>
 
-    <h4>Compatibility / Kompatibilitet</h4>
+            <p>
+                Install an ad-free YouTube client on compatible LG webOS TVs.
+            </p>
 
-    <p>
-        <b>English</b><br><br>
+            <a class="button" href="lgtv.html">
+                Open
+            </a>
 
-        This application is designed for LG Smart TVs running webOS and supporting LG Developer Mode.
-
-        <br><br>
-
-        Requirements:<br>
-        • LG Smart TV with webOS<br>
-        • LG Developer Mode app<br>
-        • Free LG account<br>
-        • Windows 10 or Windows 11<br>
-        • PC and TV on the same local network
-
-        <br><br>
-
-        <b>Note:</b><br>
-        Not compatible with Android TV, Google TV, Samsung Tizen or other Smart TV operating systems.
-    </p>
-
-    <hr>
-
-    <p>
-        <b>Norsk</b><br><br>
-
-        Dette programmet er utviklet for LG Smart-TV-er som kjører webOS og støtter LG Developer Mode.
-
-        <br><br>
-
-        Systemkrav:<br>
-        • LG Smart-TV med webOS<br>
-        • LG Developer Mode-app<br>
-        • Gratis LG-konto<br>
-        • Windows 10 eller Windows 11<br>
-        • PC og TV på samme lokale nettverk
-
-        <br><br>
-
-        <b>Merk:</b><br>
-        Ikke kompatibel med Android TV, Google TV, Samsung Tizen eller andre Smart-TV-plattformer.
-    </p>
-
-    <a class="button" href="#">
-        Download
-    </a>
-
-    <a class="button"
-       href="https://github.com/Raggen7/Raggen7_Lg_Youtube_Adfree"
-       target="_blank">
-        GitHub
-    </a>
-
-</div>
-
-    </div>
-
-    <div class="card">
-
-        <h3>More products coming soon...</h3>
-
-        <p>
-            New Raggen7 applications and utilities will be published here.
-        </p>
+        </div>
 
     </div>
 
@@ -172,5 +120,4 @@
     </div>
 
 </body>
-
 </html>

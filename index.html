@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Practical Windows tools for photos, video, TV, phone and PC. No ads, no tracking. / Praktiske Windows-programmer for bilder, video, TV, mobil og PC.">
     <title>Raggen7 Software</title>
 
     <link rel="icon" type="image/png" href="raggen7.png">
@@ -24,6 +27,7 @@
 
         .logo {
             width: 220px;
+            max-width: 60%;
             filter: drop-shadow(0 0 15px #00c8ff);
         }
 
@@ -38,11 +42,17 @@
             color: #b0c4de;
             font-weight: normal;
             margin-top: 0;
+            margin-bottom: 6px;
+        }
+
+        .sub {
+            color: #94a3b8;
+            margin: 0;
         }
 
         .catalog {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
@@ -56,6 +66,23 @@
         .card h3 {
             color: #00c8ff;
             margin-top: 0;
+        }
+
+        .card p {
+            color: #dbe4f0;
+        }
+
+        .card .no {
+            color: #94a3b8;
+        }
+
+        .soon {
+            text-align: center;
+            color: #b0c4de;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-style: dashed;
         }
 
         .button {
@@ -78,6 +105,11 @@
             margin-top: 50px;
         }
 
+        @media (max-width: 600px) {
+            body { padding: 16px; }
+            h1 { font-size: 32px; }
+        }
+
     </style>
 
 </head>
@@ -90,7 +122,9 @@
 
         <h1>RAGGEN7 SOFTWARE</h1>
 
-        <h2>Windows Tools & Utilities</h2>
+        <h2>Windows Tools &amp; Utilities</h2>
+
+        <p class="sub">Photos, video, TV, phone and PC &middot; Bilder, video, TV, mobil og PC</p>
 
     </div>
 
@@ -104,9 +138,22 @@
                 Install an ad-free YouTube client on compatible LG webOS TVs.
             </p>
 
+            <p class="no">
+                Installer YouTube uten reklame p&aring; LG webOS-TV.
+            </p>
+
             <a class="button" href="lgtv.html">
-                Open
+                Open / &Aring;pne
             </a>
+
+        </div>
+
+        <div class="card soon">
+
+            <p style="font-size:16px; margin:0;">
+                More applications coming soon...<br>
+                Flere programmer kommer snart...
+            </p>
 
         </div>
 
@@ -114,21 +161,10 @@
 
     <div class="footer">
 
-        Ragnar Næss © 2026<br>
+        Ragnar N&aelig;ss &copy; 2026<br>
         Raggen7 Software
 
     </div>
-
-<div class="card" style="text-align:center;">
-
-    <p style="font-size:16px; color:#b0c4de; margin:0;">
-
-        More applications coming soon...
-
-    </p>
-
-</div>
-
 
 </body>
 </html>

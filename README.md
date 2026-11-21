@@ -8,9 +8,12 @@ Nettside: **https://raggen7.github.io**
 
 ## Programs / Programmer
 
+<!-- PROGRAMMER_START -->
 | Program | What it does / Hva det gjør | Download / Last ned |
 |---|---|---|
-| **LG TV YouTube AdFree** | Installs ad-free YouTube on LG webOS TVs and keeps Developer Mode renewed. / Installerer YouTube uten reklame på LG webOS-TV og fornyer Developer Mode. | [Latest release](https://github.com/Raggen7/Raggen7_Lg_Youtube_Adfree/releases/latest) |
+| <!--rad:Raggen7_Lg_Youtube_Adfree-->**Raggen7 LG TV YouTube AdFree** | Enjoy a cleaner YouTube experience on LG TV. / Få en renere YouTube-opplevelse på LG TV. | [Latest release](https://github.com/Raggen7/Raggen7_Lg_Youtube_Adfree/releases/latest) |
+<!-- PROGRAMMER_SLUTT -->
+
 
 More programs will be added here as they are published.
 Flere programmer legges til her når de publiseres.

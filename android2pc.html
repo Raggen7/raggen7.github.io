@@ -20,10 +20,12 @@
         .button-bar { display: flex; gap: 10px; flex-wrap: wrap; }
         .button { background: #00c8ff; color: black; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; }
         .button:hover { background: #4ddfff; }
+        .video { margin-left: auto; background: #ff0000; color: white; }
+        .video:hover { background: #cc0000; }
         .back { color: #00c8ff; text-decoration: none; }
         video { width: 100%; border-radius: 8px; }
         .small { color: #94a3b8; font-size: 14px; }
-        @media (max-width: 600px) { body { padding: 16px; } }
+        @media (max-width: 600px) { body { padding: 16px; } .video { margin-left: 0; } }
     </style>
 
 </head>
@@ -47,7 +49,7 @@
         <div class="button-bar">
             <a class="button" href="https://github.com/Raggen7/Raggen7_Android_2_Pc/releases/latest" target="_blank" rel="noopener">Download for Windows / Last ned</a>
             <a class="button" href="https://github.com/Raggen7/Raggen7_Android_2_Pc" target="_blank" rel="noopener">GitHub</a>
-            <a class="button" href="https://raggen7.github.io/Android_2_PC.mp4" target="_blank" rel="noopener">&#9654; Video</a>
+            <a class="button video" href="https://raggen7.github.io/Android_2_PC.mp4" target="_blank" rel="noopener">&#9654; Video</a>
         </div>
         <p class="small">Download the file ending in <strong>_Setup.exe</strong>. / Last ned filen som slutter p&aring; <strong>_Setup.exe</strong>.</p>
     </div>

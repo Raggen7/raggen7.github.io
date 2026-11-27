@@ -12,7 +12,7 @@ Nettside: **https://raggen7.github.io**
 | Program | What it does / Hva det gjør | Download / Last ned |
 |---|---|---|
 | <!--rad:Raggen7_Lg_Youtube_Adfree-->**Raggen7 LG TV YouTube AdFree** | Enjoy a cleaner YouTube experience on LG TV. / Få en renere YouTube-opplevelse på LG TV. | [Latest release](https://github.com/Raggen7/Raggen7_Lg_Youtube_Adfree/releases/latest) |
-| <!--rad:Raggen7_Android_2_Pc-->**Raggen7 Android 2 Pc** | Write here what the program does, in plain words. / Skriv her hva programmet gjør, med vanlige ord. | [Latest release](https://github.com/Raggen7/Raggen7_Android_2_Pc/releases/latest) |
+| <!--rad:Raggen7_Android_2_Pc-->**Raggen7 Android 2 PC** | Full overview of your phone from the PC. Send and fetch files over your home network, no app needed. / Full oversikt over telefonen fra PC-en. Send og hent filer over hjemmenettet, uten app. | [Latest release](https://github.com/Raggen7/Raggen7_Android_2_Pc/releases/latest) |
 <!-- PROGRAMMER_SLUTT -->
 
 

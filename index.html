@@ -61,6 +61,8 @@
             border: 1px solid #334155;
             border-radius: 12px;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
         }
 
         .card h3 {
@@ -70,6 +72,7 @@
 
         .card p {
             color: #dbe4f0;
+            margin-top: 0;
         }
 
         .card .no {
@@ -93,6 +96,12 @@
             border-radius: 6px;
             font-weight: bold;
             display: inline-block;
+        }
+
+        /* knappen ligger nederst, saa alle knapper i en rad faar samme hoeyde */
+        .card .button {
+            margin-top: auto;
+            align-self: flex-start;
         }
 
         .button:hover {

@@ -104,6 +104,77 @@
             align-self: flex-start;
         }
 
+        .shots {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .card .shots {
+            margin-top: auto;
+        }
+
+        .card .shots + .button {
+            margin-top: 0;
+        }
+
+        .shots img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 3 / 2;
+            object-fit: contain;          /* hele bildet vises, ingenting kuttes */
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            cursor: zoom-in;
+        }
+
+        .shots a:hover img,
+        .shots a:focus-visible img {
+            border-color: #00c8ff;
+        }
+
+        .viewer {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            background: rgba(5, 10, 20, 0.96);
+        }
+
+        .viewer[open] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .viewer img {
+            max-width: 100%;
+            max-height: 100%;
+            cursor: zoom-out;
+        }
+
+        .viewer button {
+            position: fixed;
+            width: 48px;
+            height: 48px;
+            border: 0;
+            border-radius: 50%;
+            background: #00c8ff;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .viewer .close { top: 12px; right: 12px; }
+        .viewer .prev  { left: 12px; top: calc(50% - 24px); }
+        .viewer .next  { right: 12px; top: calc(50% - 24px); }
+
         .button:hover {
             background: #4ddfff;
         }
@@ -152,6 +223,11 @@
                 Installer YouTube uten reklame p&aring; LG webOS-TV.
             </p>
 
+            <div class="shots">
+                <a href="bilder/lgtv_1.webp"><img src="bilder/lgtv_1.webp" alt="Raggen7 LG TV YouTube AdFree, screenshot 1" loading="lazy"></a>
+                <a href="bilder/lgtv_2.webp"><img src="bilder/lgtv_2.webp" alt="Raggen7 LG TV YouTube AdFree, screenshot 2" loading="lazy"></a>
+            </div>
+
             <a class="button" href="lgtv.html">
                 Open / &Aring;pne
             </a>
@@ -170,6 +246,11 @@
             <p class="no">
                 Full oversikt over telefonen fra PC-en. Send og hent filer over hjemmenettet, uten app.
             </p>
+
+            <div class="shots">
+                <a href="bilder/android2pc_1.webp"><img src="bilder/android2pc_1.webp" alt="Raggen7 Android 2 PC, screenshot 1" loading="lazy"></a>
+                <a href="bilder/android2pc_2.webp"><img src="bilder/android2pc_2.webp" alt="Raggen7 Android 2 PC, screenshot 2" loading="lazy"></a>
+            </div>
 
             <a class="button" href="android2pc.html">
                 Open / &Aring;pne
@@ -197,6 +278,50 @@
         Raggen7 Software
 
     </div>
+
+    <dialog class="viewer" aria-label="Screenshot / Skjermbilde">
+        <img alt="">
+        <button type="button" class="prev" aria-label="Previous / Forrige">&#10094;</button>
+        <button type="button" class="next" aria-label="Next / Neste">&#10095;</button>
+        <button type="button" class="close" aria-label="Close / Lukk">&#10005;</button>
+    </dialog>
+
+    <script>
+        /* klikk paa et skjermbilde viser det i full skjerm; piltaster blar, Esc eller klikk lukker */
+        (function () {
+            var viser = document.querySelector(".viewer");
+            if (!viser.showModal) return;          /* gammel nettleser: lenken aapner bildet */
+            var bilde = viser.querySelector("img");
+            var liste = [], nr = 0;
+
+            function vis(i) {
+                nr = (i + liste.length) % liste.length;
+                var liten = liste[nr].querySelector("img");
+                bilde.src = liste[nr].href;
+                bilde.alt = liten.alt;
+            }
+
+            document.addEventListener("click", function (e) {
+                var lenke = e.target.closest(".shots a");
+                if (!lenke || e.ctrlKey || e.metaKey || e.shiftKey) return;
+                e.preventDefault();
+                liste = Array.prototype.slice.call(lenke.parentNode.querySelectorAll("a"));
+                vis(liste.indexOf(lenke));
+                viser.showModal();
+            });
+
+            viser.addEventListener("click", function (e) {
+                if (e.target.closest(".prev")) vis(nr - 1);
+                else if (e.target.closest(".next")) vis(nr + 1);
+                else viser.close();
+            });
+
+            viser.addEventListener("keydown", function (e) {
+                if (e.key === "ArrowLeft") vis(nr - 1);
+                if (e.key === "ArrowRight") vis(nr + 1);
+            });
+        })();
+    </script>
 
 </body>
 </html>

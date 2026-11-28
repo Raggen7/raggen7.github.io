@@ -87,7 +87,11 @@
         }
 
         video {
+            display: block;
             width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            max-height: 85vh;
             border-radius: 8px;
             background: #000;
         }
@@ -153,6 +157,16 @@
             Download the file ending in <strong>_Setup.exe</strong>. /
             Last ned filen som slutter p&aring; <strong>_Setup.exe</strong>.
         </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Video</h2>
+
+        <video controls preload="metadata" playsinline poster="bilder/lgtv_poster.jpg">
+            <source src="Raggen7_LG_TV_YouTube_AdFree_Github.mp4" type="video/mp4">
+        </video>
 
     </div>
 
@@ -243,12 +257,6 @@
     </div>
 
     <div class="card">
-
-        <h2>Video</h2>
-
-        <video controls preload="none" playsinline>
-            <source src="Raggen7_LG_TV_YouTube_AdFree_Github.mp4" type="video/mp4">
-        </video>
 
         <p class="small">
             Unofficial program, not affiliated with LG or YouTube. Use at your own risk. /
